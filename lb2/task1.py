@@ -7,9 +7,7 @@ def analyze_log_file(log_file_path):
                 parts = line.split()
 
                 for i, p in enumerate(parts):
-                    # шукаємо частину, яка закінчується на "
                     if p.endswith('"'):
-                        # наступна частина — це статус-код
                         if i + 1 < len(parts) and parts[i+1].isdigit():
                             code = parts[i+1]
                             status_counts[code] = status_counts.get(code, 0) + 1

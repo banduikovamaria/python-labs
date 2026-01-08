@@ -27,5 +27,3 @@ allowed = ["83.149.9.216", "93.114.45.13"]
 
 result = filter_ips("apache_logs.txt", "filtered_result.txt", allowed)
 print(result)
-
-
